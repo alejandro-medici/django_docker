@@ -9,3 +9,12 @@ class Person(models.Model):
 class Poll(models.Model):
     question = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
+
+    def __str__(self):
+        return self.question
+
+class Movie(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    director = models.CharField(max_length=200)
+    rating = models.IntegerField()
